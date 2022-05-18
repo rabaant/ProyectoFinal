@@ -1,7 +1,7 @@
 <template>
   <div class="home container-fluid">
     
-    <homeComp msg="Welcome to my Marvel's App"/>
+    <homeComp msg="Welcome to Marvel's Universe"/>
     
    
   </div>

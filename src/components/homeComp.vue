@@ -2,7 +2,7 @@
   <div class="welcome container text-center">
       <div class="row">
         <h1>{{ msg }}</h1>
-        <p> <router-link :to="`/login`">Log in</router-link> or
+        <p v-if="this.$store.state.logged!=true"> <router-link :to="`/login`">Log in</router-link> or
             <router-link :to="`/register`">Register</router-link>
             to acess the App.
         </p>

@@ -6,7 +6,7 @@
                 <img id="logo" alt="logo Marvel" src="../assets/img/logo.png">
             </div>
             
-            <div class="col-5 mt-3">
+            <div class="col-5 mt-3" v-if="this.$store.state.logged!=true">
                 <ul>
                     <router-link :to="`/login`" class="me-3">Log in</router-link>
                     <router-link :to="`/register`">Register</router-link>

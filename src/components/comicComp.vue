@@ -1,14 +1,14 @@
 <template>
    
-    <div v-if="comic" class="card mb-5 mx-auto" style="width: 16rem;">
+    <div v-if="comic" class="card mb-5 mx-auto" style="width:20rem">
         <div v-if="comic.index==this.id">    
-        <img class="card-img-top" :src="`${comic.thumbnail.path}.${comic.thumbnail.extension}`" :alt="`${comic.title}`">
-        <div class="card-body">
-            <h6 class="card-title">{{comic.title}}</h6>
-            <p v-if="comic.description" class="card-text red description">{{comic.description}}</p>
-            <p v-else class="card-text red description">There's no description available.</p>
-            <a :href="`${comic.urls[0].url}`" class="btn btn-red">Marvel's official page </a>
-        </div> 
+            <img class="card-img-top" :src="`${comic.thumbnail.path}.${comic.thumbnail.extension}`" :alt="`${comic.title}`">
+            <div class="card-body">
+                <h6 class="card-title">{{comic.title}}</h6>
+                <p v-if="comic.description" class="card-text red description">{{comic.description}}</p>
+                <p v-else class="card-text red description">There's no description available.</p>
+                <a :href="`${comic.urls[0].url}`" class="btn btn-red" target="blank_">Marvel's official page </a>
+            </div> 
         </div>
     </div>   
 </template>
@@ -45,8 +45,7 @@ export default {
         let url=this.url;
         let index=this.index
         let id=this.$route.params.id;
-        console.log(this.index);
-         console.log(this.url);
+       
         this.$store.dispatch('getComic',{url,index,id});
     }
 }

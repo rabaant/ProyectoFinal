@@ -14,7 +14,8 @@
         </div>
     </div>
     <div class="row mx-5 mt-4">
-        <div v-for="(item,index) in character.comics.items" :key="index" class="col-12 col-md-6 col-lg-6 col-xl-3">
+        <div v-for="(item,index) in character.comics.items" :key="index" class="col-12 col-md-6 col-lg-6 col-xl-4">
+           
             <comicComp :url="item.resourceURI" :index="index"/> 
         </div>
          
